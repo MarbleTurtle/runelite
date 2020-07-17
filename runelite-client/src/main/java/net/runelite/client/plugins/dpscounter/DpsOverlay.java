@@ -99,7 +99,7 @@ class DpsOverlay extends OverlayPanel
 		boolean showDamage = dpsConfig.showDamage();
 		DpsMember total = dpsCounterPlugin.getTotal();
 		boolean paused = total.isPaused();
-		if (dpsMembers.isEmpty() && total.isReset())
+		if (dpsMembers.isEmpty() && total.getStart() == total.getEnd())
 		{
 			return null;
 		}
